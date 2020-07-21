@@ -5,7 +5,7 @@ class Config:
     General configuration parent class
     '''
     
-    SECRET_KEY =''
+    SECRET_KEY ='127'
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
@@ -31,7 +31,7 @@ class TestConfig(Config):
         Config: The parent configuration class with General configuration settings
     ''' 
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://foxx:bird@localhost/pitch_test'   
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://foxx:1234@localhost/pitch_test'   
      
     
 
@@ -42,7 +42,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://foxx:bird@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://foxx:1234@localhost/pitch'
 
     DEBUG = True
 
